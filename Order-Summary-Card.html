@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card2</title>
+    <style>
+            *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background: rgb(158, 108, 130);
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(177,194,213,1) 100%);
+            display: flex;
+             justify-content: center;
+              align-items: center;   
+        } 
+        .card{
+            width: 400px;
+            height: 600px;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+        .card img{
+            width: 100%;
+            height: 30%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .textBox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 75%;
+            text-align: center;
+        }
+        #amountBox{
+            width: 80%;
+            height: 10%;
+            background-color: rgb(180, 240, 70); 
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        #leftBox{
+            height: 100%;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .imageBox img{
+            height: 3.5rem;
+            width: 3.5rem;
+
+        }
+        #paymentButton{
+            width: 80%;
+            height: 9%;
+            background-color: rgb(87, 11, 94);
+            color:white;
+            border-radius:10px ;
+            box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        }
+        .cancelBox a{
+            text-decoration: none;
+            color: rgb(53, 44, 44);
+            font-weight: bold;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="card">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ0NDQ0NDQ0ODQ0NDQ8NDQ0NFhEWFhURFRUYHSggGBolHRUVITEhJSktLi4uFx8zODMtNygtLisBCgoKDg0OFQ8QFSsdHR0tLS0rLystLS0rLS0rLS0tLy0rKy0tLS0rLSstLSstLS0tLSsrLS0tKystLSstLS0tLf/AABEIAOEA4QMBEQACEQEDEQH/xAAbAAEAAQUBAAAAAAAAAAAAAAAABgECAwQFB//EAEIQAAIBAgMEBgUKBQIHAAAAAAABAgMRBAUSBjFBUSEiYXGBkRMjMqGxBxRCUlNicpLB0YKTorLC4eIkMzRDRGNz/8QAGwEBAQADAQEBAAAAAAAAAAAAAAECBAUDBgf/xAA4EQEAAgECAwQJAwMCBwAAAAAAAQIDBBESITEFQVGBEzJhcZGxwdHwIqHhM0JSBhUjNFNiY3KS/9oADAMBAAIRAxEAPwDyU6LwAAUCAUAAAAAAAAAAAAAEAoAIAAqBAChQIgUAoACAAAACgAAAAAAAAAAAAAAAAEAoAIAAAEABQABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEUKBAKgFAAAAAAACAUAAAAAAAAAAAAAEAoAAAAAQCoEUKAAAAAAAgFAAAAEAAUAAAAAAAAACAUAAAgACgEAAUAAABAKN/LMmxWLfqKUpR41H1Ka/ie/uRJnZ74dLlzepXl49yUYH5PpOzxGJUecKMNX9Uv2PG2bbpDo4+yJ/vv8Pv8Aw7FDYLL4rrPEVHzlVUf7UjwtqL9zZr2XgjrvPmzPYHLWuiNePbGs38UzynVZY8CezcHhPxaOJ+TSi16jF1Yvh6aEKi7urpJHaFo9avw/Ja9+y6/22nz/ACEazfYrMcKnP0SxFJXvPD3m0ubh7XkmbOPW4b8t9p9v36NHLocuPntvHsRw22mqFAgFAAAAAAAAAAAQCgAAAAAQAvoUZ1Jxp04uc5O0YxV22GVK2vaK1jeZTnItkKVO1TF2q1N6pb6UO/6z93eZcEw72l7LrT9WXnPh3fz8kup2SSSSS6EkrJLkkedqutEbcoZoSPC1UZos17VRkizwtVjLNCR4WqxlmhI1r1YzDgbS7H4XME5pKhirdFeC6JvlUj9Jdu/tPXT63Jg5da+H2aWo0lMvPpPj93k+aZLisHVlSr0ZRcfpRTlTlHhKMlvTPo8O+bHGWkTNZ7/D2T4S4eTDfHO1oaBHkBQAAKAAAAAAABAKgAAAAoEXUqUpyjCEXKcmoxit7YiN52hlWs2mK1jeZei7O5NDBwu7SrzXrKnL7sez4m7XDwx7X1Gi0ddPXnztPWfpDtxkY2q3WSMjxtUZYs8LVRmhI8LVSWaMjXtViyRZ4Wqks0JGterGWaDNa0MJa2b5ZDF0nCVlNXdOpxhL9nxRt9m9pZOz83pK86z60eMfeO6fo8MuOL12eZ5hlUHOdOtSSqQbjJrqyTXat5+jTi02rx1yxETFo3iY5T+e9xsmON9pjm4WOyWcLypt1I8vpr9zlajsy9P1Y/1R+/8ALXtimOjlHMeYECqAAAAIBQAACAUABAKERLtjssUY/OprrTvGjf6MNzl4/DvN/S4uXHPk7nZem2j01us9Pd4+aVRkbMw7W7LGR5WqrJGR42qMsZHhaozRkeNqozQka96pLLGRrWqxZos1r1YyzQZrWqxlmgzWvDCUY21wCvTxMV7Xq6tuLt1ZPwTXkfXf6V1szF9Jaen6q/WPjtPnLm6zHttePNFbH2O7Q3c7M8qjWvOFo1efCff+5z9Xoa5t7V5W+fv+7C9Ynn3ozODi3GScZRdmnvTPnrVmszW0bTDwUIAAAAAAAAAAACAAK2MuwjxFanSXRrfWf1YLpk/IzxY+O8VemHFOXJFI73o9KKjGMYq0YpRilwS3I7e0RG0Pq6xFYiI6QyxZjMPSJZIyPKYZRLLGR5WqrJGR42qL51owi5TlGEVvlJqMV4s8LQxtaKxvM7Q5GK2zwFJtKc6zX2MLr8zsmeFo3aGTtPT05RMz7msvlBwy/wDHxNufqr/3HjOKZeH+7Yv8Z/b7unl+2uX1Wk6sqDfCvDQvzK8V5nhk09u6N3tTtHBfv296T0asZJSjJSjJXUotSi1zTW80L12bfKY3hswZqXhhLWz6iqmDxCfCm5rvi9S+BsdkZZxdoYLR3zt/9cvq1dVG+K350eeWP1FweIsDicvOst9LH0kF62C4fTjy7+RztdpfS146+tH7/ncxmd0YPn2IAKAAAAAAAAAIAAqU7H4O0Z4hrpn1IfhT6z8X8Dp6HFym897r9m4tonJPfyhJUzemHWiVyZjMMolkizCYZxLJGR5zDKJc/O88p4OCv16sl1Kadr/elyRq5bxT3tXV6ymnrz52npCA5jmVfFT11puVvZiuiEPwx4fE0rWmecvms+oyZrb3nf5NS5i8V2l8n5Mu0rstIjp5JnmJwE9VCfVbvOjLppVO9cH2rpMMmKuSNrPfBqcmGd6zy8O565sxtBRzGlrp9SpCyq0ZO8qcn8Yvgzh6rBbFO09Hfwammeu8de+HXx//AE9f/wCNX+xmto/+bw/+9fnCZ/6d/dPyecWP1d8xxFgcRYJxIrtBgvRVdcVaFW77FPiv18zgdoYPR5OKOlvmyrO7lnPZBUAAUAAAAAAEAq6nBylGMVeUmoxXNt2QiJtMRHWSImZiI73oWFoqlThTjuhFRXbbifR0pFKxWO59JjrFKxWO5mTLs9YlemYzDOJXpmEwziWLH42OHozqy6VBdC+tLcl4s8ctopWbSxzZoxY5vPc85xeJnWqSq1HqnN3b4diXYjjWtNp3l8pkyWyWm9p5y28oyqeJle+ilF2lPi39WPabOm0ts0+EeL10+nnLPhCVYTL6FFWp04p/XfWm/FnaxafHj9Wv3dWmLHjj9MNls92U2aONy2hWT1QSl9eFozXjx8Twy6XFl6xz8Y6tbJipfrCK5ll88PPTLrRl7E0uiXZ2M4eo09sFtp6T0lzcmOaTtK/JM1q4HE08TS3wdpQe6pTftQff7mkzUy4q5aTS3euHLOK8Xh7k8VDEYKVek9VOrhpTg/uuDfmfN6as01mKtusXr84d7NeLYLWjpMT8kAUT9U3fIcZpG5xq6RunG0s4wnpcPUil1orXD8S6bePSvE1tXj9JitHf1jyWmTa0ISfNtxUqgAAAAAAAQChEdPZ2lrxVPlBSn5Ky97Rt6KnFmj2c21pK75Y9nNNLnddrdVMjKJVTJsziV8WYTDOJRrbTFP1NFPo6akl7o/5HM11vVr5uX2pl9TH5/b6o1QpOpOEI75yjFd7drmjSs2tFY73IrWbTFY709w9GNKEacFaMVZfv3n0uPHFKxWvSHdrWKVisdIXtnpskytuVhMqNlYTLVzHDKtSlTe9q8HymtzPLPhjLjmnw97wyRxVmEJa59D4rkz5fo571H5Ncc6mV4zDyd/m3pXBcqdSLlb82vzOTqce2u09/8rV+MTH02dPT5N9Llr/jE/vDU0n6Du+U4zSNzjV0jdOM0jdONAMfR9HWq0+Eakkvw36PdY+YzU4Mlq+EuvitxUiWAwegAIBQAACAUABEdzZOPrasuVOK85f6HS7Nj9dp9je0PrWn2JRc67p7qpjZd1yZGUSqmY7M4sh+1kr4rupQt5s4uu/q+TjdoTvm8oa2QRviqV+Gt+Ohk0Ub56+fyeGm/q1/O5Mmz6B1ZlRsrCZWtlecyo2VhMqXMoYTKFZhFKvWS3ekn8T5XUxEZrxHjLSt1lL/AJM6zis0XB4RSfem0vizn5qceo0sf+SPpP0etb8On1E/9k/KXUsfZvlYuWBxlgcZYHGhG0sNOMq/eVOX9CX6HA1sbZ7eXydrRW3w18/m5hqtoKAAAAAAAgRQDvbJvr1vww+LOp2Z61/JuaOedkkudd0N1SMolVMLEq3JsyiUW2tpWrU58J07eMX/ALkcbtGu1628Y+Tl6+P1xbxj5OXltf0VelUe6M1q7Ivob8maunyejy1tPi1cduG8Sm9z6d1JlRlYTKjZXnMrSsJlbUmopybsoptvkkSZisTaekMZlCK1TXKU3vlKUvN3Pkr247TbxndqdeaW7CLTRxsvtZYeiunhHVOX+Hmeukwek1WO/djiZ855R+28tXX54x6W1O+8xHlHOfpHm7+k+g3fO8RpG5xmkJxFgcaD7VP/AIyp2Rpr+hP9Th62f+NPk+g7P/oR5/NyTVboAAAAAAgFAAB1tmalsQ4/XpyXimn+jN/s222Xbxhsaadr+9KrncdCJVuGUSrcjLdW5GW7nZ/g3WoPSrzpvXFLe+a8v0NTWYfSY+XWObw1OP0lOXWOaGHAcdJMjzVSjGjVdpKypye6a4Jvn8TtaHWRMRjvPPu9v8tvFm5cMuy2dV7TKhWEyo2VhMo/nmZqSdGk7r/uTW5/dRxe0NbFo9FSeXfP0eN7d0OL7+SXS2ch5vQshy75th4QkrVJdep+N8PBWXgd3TY/R44ievWXyes1MZs02jpHKPd/PV0dJsNbiNI3OI0jdOI0g4nnWe1VPGYiS3elcfypR/xODqbcWW0+19boq8OnxxPh8+f1aJ4tkAAAAAAAAAAM+Br+iq06nCMlf8O5+5s9cGT0eSt/CWVLcNolN0z6h04lUi7q3Iy3VuF3VTIziUaz7KHFyrUo3i7upBLpg+Ml2fD4cfW6OYmclI5d/sc/U6faeOvm4JzGk38Nm+IpqykpxW5VFqt47zcxa7NjjbfePb+bvSMlobT2hq2/5dO/O8reRsf7rk29WP3ZelnwaWLzOvVVpStF74wWlPv4s1c2tzZY2tPLwhhNplpmqxS7ZfZ+UXHE4iLUl00aUt6f15LnyXDf3dLS6bb9d490Pnu0+0otE4cU8u+fpH1nySqx0d3D4jSNziV0jc4jSN04mHG1lRpVKst1OEpd9l0IwvfhrNvB6YazlyVxx3zs8tbbbbd2223zb3s4D7qIiOUdAAAAAABAKAAAAAluRYv0tCKb69O0Jc7fRfl8GfQ6HN6TFET1ry+zcw33r7nRNx77lyLuqGW6tyMoldBNtJK7e5Ik8uaXy0x0m952iOssOP2SpVY6oy9DWfS3FXpt9sf1RzM+lx5J3r+l8Rn/ANQROeZpj/R8Jn2/wj2K2Ux1N9WnGsr9DpVI7u6VmaFtJkjpG7cxdsaW/W0198fbdqrIcdu+a1fJL33MPQZP8Ze/+46X/qw3cJsjjaltap0I8XOalK3Yo3+KPSujyT15NbL21paerM2n2Rt+87fKUmyjZnD4VqbvWrLdUmlaL+7Hh39LN3FpqY+fWXD1fa2bURNY/TXwjv8AfP5Ds6Ta3c3iNI3OI0jc4jSNziNI3OJFduseowhhYvrTaqVFygn1U+9q/wDCaGty8opHe7/Yenm1rZ56Ryj39/wj5oYc19KFAAAAAAAAAAAAbeWYx0Kql06H1ai5x596NjS6j0OSLd3eypbhndMITTSad00mmtzXM+liYmN4727ErrhlEqhluupxcmoxTbfQkiTMRG8scmamKk5LztEdZdzB4NU109M3vfLsXYad8nFPsfn3a/bF9bfhryxx0jx9s/nJsaDDdxtzQNzc0Dc3NI3NzQNzc0Dc3NA3Tc0Dc3NA3N2tmOLp4ajOtU9mCvZWvKXCK7W+gxveKVm0vfT4b58lcdOs/m/k8rx2LniKtStU9qpK7XCK3KK7ErLwONe83tNp7332DDXDjrjr0j8/dgMHqFAIAAoAIBQIgVQAECK6+SZp6O1Ko+o31JP6D5Ps+B1NBrPR/wDDvPLunw/h6477cpSS53GxuvpQcmoxTcm7JLezGZiI3lMmWmKk3vO0R1lIcBgVRV301GutLl2I0cmXjn2Pz/tbte+tvw15Y46R4+2fzk29J5uNuWBuaQbmkG5pBuaQbmkG5pBuaQbrK9SFOEqlSUYQgm5Sk7RiubJMxEbyypW17RWsbzPR5ltPnrxtVKN44em36KL6HJ7nUkufJcF3s5mfN6SeXR9x2Z2fGkpvbneev2j85uKeDphECqEAoAAAAAAIBQABAiuplebyo2hUvKnw4yh3c12HR0mvnFtS/Ov7x/D0pfblL0bIIUJUlVo1IVnJdacXfT9y29ePSbt88ZedZ5PiO3NfnzZfRXrNKR0ie/2z4+zuh1LHm4SlihYCtiBYBYBYBYBYDQzfN8Pg4aq9RJtdSmumrPuj+u4wvkrSOctvSaLNqrcOOvvnuj3z+S832g2grY6Vn6uhF3hRT8pTf0pe5e852XNOSfY+00HZuLSV3jnees/SPCPm5B5OiAAgAIoUAgAChECqEAqAUAEADNg8ZWw8/SUKk6U+cHa65NbmuxmVbTWd4nZ5ZsGPNXgyVi0e385eSV5dt7UjaOKoKp/7KLUJ+MX0PzRt01c/3Q4Go/07S3PDfh9k84+PX9pSHCbX5dV31/RPlWhKFv4vZ95711GOe9x8vYusx/2cXumJ/br+zpUc0wlT2MVh5fhrU3+p6Res98NK+k1FPWxWjyll+d0ftqX8yH7jijxefocn+E/CT53R+2pfzIfuOKPFfQZf8J+Enzuj9tS/mQ/ccUeJ6DL/AIT8Ja9bOsFT9vF4ePZ6aDfkmSclI/uh7U0Gqv6uK0+UuVjNtcBTvolUryXCnTcV+adl5HlbU446c2/h7B1d/WiKR7Z+kbo3me3GKqpxoRjhov6S9ZVt3tWXl4mvfVWn1eTs6bsDBj2nLM3n4R95+PkjNWpKcnOcpTnL2pzblJ97ZrTMzzl3KVrSsVrG0R3QtDIAAAAAAAAAAAQCgAAQAAAoAAAFGiG6mhcl5FXinxNC5LyBxT4mhcl5IG8+K4iAAoBAKBAKAAAAgACgACAAAFAAAAAAAABAKAAAAAAAAAIBQAQCgAIgVQAQCgEAAUIBQAAAAAAAAAAAAAAAAAAAgFAAQCgAIBQAAABAKgFAAAIAAAUAAAAAAAAAAAAAAAAAgFCAUCAUAgAABQAAAACAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAKEAoBAAFABAAACoqFUIBRUCgAAQABQAACAUCAAKAAAAAEAAwBUCK/9k=" >
+        <div class="textBox">
+        <h2>Order Summery</h2>
+        <p>This is a simple order summary project built using HTML and CSS. It displays product details, pricing, and a summary of the total cost in a clean and modern design. The layout is fully responsive and can be reused as part of a checkout or payment page.</p>
+         </div>
+         <div id="amountBox">
+            <div id="leftBox">
+                <div class="imageBox">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrSnUKoo-DO1jcZMSYtZSEw8Q_Wm_CVOmXqg&s" >
+    
+                </div>
+                <div id="textAmountBox">
+                    <p>Amount</p>
+                    <p>$99.9/year</p>
+                </div>
+            </div>
+            <div class="rightBox">
+                <a href="#">Change</a>
+            </div>
+         </div>
+         <button id="paymentButton">
+            Proceed to Payment
+         </button>
+         <div class="cancelBox">
+            <a href="#">Cancel Order </a>
+         </div>
+    </div>
+    </div>
+</body>
+</html>
